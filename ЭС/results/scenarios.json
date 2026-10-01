@@ -1,0 +1,167 @@
+{
+  "orvi": {
+    "input": {
+      "temperature": 37.6,
+      "runny_nose": true,
+      "cough": true,
+      "chills": false,
+      "weakness": true,
+      "headache": false,
+      "severe_sore_throat": false,
+      "difficult_swallowing": false,
+      "shortness_of_breath": false,
+      "days_with_fever": 2
+    },
+    "rules": [
+      {
+        "id": "R1",
+        "name": "Признаки ОРВИ"
+      },
+      {
+        "id": "R6",
+        "name": "Решение по гипотезам и предупреждениям"
+      }
+    ],
+    "hypotheses": [
+      {
+        "name": "Признаки, похожие на ОРВИ",
+        "rule": "R1"
+      }
+    ],
+    "warnings": [],
+    "decision": {
+      "hypotheses": [
+        "Признаки, похожие на ОРВИ"
+      ],
+      "warnings": [],
+      "action": "Получена учебная гипотеза по правилам. Для диагноза нужна оценка медицинского специалиста."
+    }
+  },
+  "flu_warning": {
+    "input": {
+      "temperature": 39.1,
+      "runny_nose": false,
+      "cough": true,
+      "chills": true,
+      "weakness": true,
+      "headache": true,
+      "severe_sore_throat": false,
+      "difficult_swallowing": false,
+      "shortness_of_breath": false,
+      "days_with_fever": 4
+    },
+    "rules": [
+      {
+        "id": "R2",
+        "name": "Признаки гриппа"
+      },
+      {
+        "id": "R4",
+        "name": "Длительная температура и слабость"
+      },
+      {
+        "id": "R6",
+        "name": "Решение по гипотезам и предупреждениям"
+      }
+    ],
+    "hypotheses": [
+      {
+        "name": "Признаки, похожие на грипп",
+        "rule": "R2"
+      }
+    ],
+    "warnings": [
+      {
+        "name": "Температура держится более трёх дней при слабости",
+        "urgent": false,
+        "rule": "R4"
+      }
+    ],
+    "decision": {
+      "hypotheses": [
+        "Признаки, похожие на грипп"
+      ],
+      "warnings": [
+        "Температура держится более трёх дней при слабости"
+      ],
+      "action": "Нужна консультация медицинского специалиста с учётом отмеченных предупреждений."
+    }
+  },
+  "urgent": {
+    "input": {
+      "temperature": 39.1,
+      "runny_nose": false,
+      "cough": true,
+      "chills": true,
+      "weakness": true,
+      "headache": true,
+      "severe_sore_throat": false,
+      "difficult_swallowing": false,
+      "shortness_of_breath": true,
+      "days_with_fever": 2
+    },
+    "rules": [
+      {
+        "id": "R2",
+        "name": "Признаки гриппа"
+      },
+      {
+        "id": "R5",
+        "name": "Затруднённое дыхание"
+      },
+      {
+        "id": "R6",
+        "name": "Решение по гипотезам и предупреждениям"
+      }
+    ],
+    "hypotheses": [
+      {
+        "name": "Признаки, похожие на грипп",
+        "rule": "R2"
+      }
+    ],
+    "warnings": [
+      {
+        "name": "Затруднённое дыхание",
+        "urgent": true,
+        "rule": "R5"
+      }
+    ],
+    "decision": {
+      "hypotheses": [
+        "Признаки, похожие на грипп"
+      ],
+      "warnings": [
+        "Затруднённое дыхание"
+      ],
+      "action": "Нужна срочная медицинская оценка из-за затруднённого дыхания."
+    }
+  },
+  "no_match": {
+    "input": {
+      "temperature": 36.6,
+      "runny_nose": false,
+      "cough": false,
+      "chills": false,
+      "weakness": false,
+      "headache": false,
+      "severe_sore_throat": false,
+      "difficult_swallowing": false,
+      "shortness_of_breath": false,
+      "days_with_fever": 0
+    },
+    "rules": [
+      {
+        "id": "R7",
+        "name": "Недостаточно совпадений с правилами"
+      }
+    ],
+    "hypotheses": [],
+    "warnings": [],
+    "decision": {
+      "hypotheses": [],
+      "warnings": [],
+      "action": "Правила не дали гипотезу. Это не означает отсутствие заболевания."
+    }
+  }
+}

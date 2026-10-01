@@ -1,0 +1,4 @@
+Модель,Accuracy
+DecisionTreeClassifier,0.9040767386091128
+KNeighborsClassifier,0.8788968824940048
+LogisticRegression,0.86810551558753

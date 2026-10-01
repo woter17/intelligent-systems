@@ -1,0 +1,25 @@
+УЧЕБНАЯ ЭКСПЕРТНАЯ СИСТЕМА
+Тема: простудные заболевания
+Входные факты:
+  temperature: 36.6
+  runny_nose: False
+  cough: False
+  chills: False
+  weakness: False
+  headache: False
+  severe_sore_throat: False
+  difficult_swallowing: False
+  shortness_of_breath: False
+  days_with_fever: 0
+
+Сработавшие правила:
+  R7: Недостаточно совпадений с правилами
+
+Учебные гипотезы:
+  Нет совпадений с правилами гипотез.
+
+Предупреждения:
+  Не отмечены правилами. Это не медицинское заключение.
+
+Итог:
+Правила не дали гипотезу. Это не означает отсутствие заболевания.

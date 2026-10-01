@@ -1,0 +1,4 @@
+Модель,Accuracy,Macro-F1
+RandomForest,1.0,1.0
+LogisticRegression,0.9814814814814815,0.9828609096901779
+RandomForest balanced,1.0,1.0

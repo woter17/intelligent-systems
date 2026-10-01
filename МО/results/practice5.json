@@ -1,0 +1,9 @@
+{
+  "best_model": "LinearRegression",
+  "coefficients": {
+    "median_income": 44191.755887572624,
+    "housing_median_age": 1683.7847182569685,
+    "rooms_per_household": -2551.4125701583757
+  },
+  "intercept": 1357.4378569971304
+}

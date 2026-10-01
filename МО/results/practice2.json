@@ -1,0 +1,9 @@
+{
+  "best_params": {
+    "model__criterion": "entropy",
+    "model__max_depth": 8,
+    "model__min_samples_leaf": 5
+  },
+  "cv_f2": 0.7629380383191823,
+  "recall_target_met": true
+}

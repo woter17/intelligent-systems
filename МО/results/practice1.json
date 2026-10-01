@@ -1,0 +1,6 @@
+{
+  "best_model": "DecisionTreeClassifier",
+  "accuracy": 0.9040767386091128,
+  "fp": 40,
+  "fn": 40
+}

@@ -1,0 +1,14 @@
+# Проверено с Python 3.10.20. Библиотеки для всех трёх разделов.
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.15.3
+scikit-learn==1.7.2
+imbalanced-learn==0.14.1
+matplotlib==3.10.8
+gradio==6.9.0
+gradio_client==2.3.0
+pytest==9.0.2
+nbformat==5.10.4
+nbclient==0.10.4
+ipykernel==7.2.0
+jupyterlab==4.4.9
